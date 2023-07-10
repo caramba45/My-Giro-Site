@@ -55,5 +55,4 @@ $(document).ready(function() {
       var elemq = $('#all-tab');
       scrollToElement(elemq, paretq);
     })
-
   })
