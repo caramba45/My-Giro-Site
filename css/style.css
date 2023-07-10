@@ -63,7 +63,7 @@ h3{
 .info{
     grid-column: 1 / 4;
     grid-row: 2;
-    background-image: url('../img/GL68rFijDUo.jpg');
+    background-image: url("https://raw.githubusercontent.com/caramba45/My-Giro-Site/main/img/GL68rFijDUo.jpg");
     width:100%;
     height:400px;
 	background-repeat: no-repeat;
