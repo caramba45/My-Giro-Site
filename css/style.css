@@ -1,0 +1,542 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gill Sans", sans-serif ;
+}
+
+/* Страница */
+.page {
+    height: auto;
+    display: grid;
+    grid-template-columns: 12% calc(100% - 24%) 12%;
+    grid-template-rows: 100px auto auto auto auto /**/ auto auto auto auto auto auto;
+    position: relative;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/* Шапка */
+.logo {
+    width: 97px;
+    height: 96.5px;
+    margin-bottom: 1%;
+}
+
+.call{
+    grid-column: 1 / 4;
+    grid-row: 1;
+    width: 100%;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .35);
+    position: relative;
+    top: 15px;
+    height: 85px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn__call{
+    font-weight: bold;
+	background: #1e4da2;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+	border:1px;
+	border-radius: 13px;
+	width: 160px;
+	height: 30px;
+    color:#ffffff;
+    position: relative;
+    cursor: pointer;
+    left: 100px;
+    margin-bottom: 1%;
+}
+.btn__call:hover{
+   background: #23a6d5;
+}
+
+
+/* Информация о компании*/
+.info{
+    grid-column: 1 / 4;
+    grid-row: 2;
+    background-image: url(/img/GL68rFijDUo.jpg);
+    width:100%;
+    height:400px;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info_div{
+    text-align: center;
+    background-color: rgb(255, 255, 255,0.3);
+    width: 55%;
+    height: max-content;
+	border-radius: 10px;
+}
+
+.info_div h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info_btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 45px;
+    border-radius: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    border: unset;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background: #1e4da2;
+    color: #ffffff;
+    
+}
+
+.info_btn:hover{
+    background-color: #23a6d5;
+}
+
+/* Преимущества */
+.privilege{
+    margin-top: 3%;
+    grid-column: 2 / 3;
+    grid-row: 3;
+    position: relative;
+}
+.privilege_info{
+    margin-top: 4em;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-around;
+}
+.advantages img{
+    width: 136px;
+    height: 120px;
+}
+.corusel{
+    position: absolute;
+    right: 10%;
+    top: 0%;
+}
+
+.btn_corusel{
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 25px;
+    border: none;
+    background-color: #ffffff;
+    color: #000;
+}
+.btn_corusel:hover{
+    background: #d0d5d6;
+}
+
+.btn_corusel_img{
+    width: 66%;
+    height: 66%;
+    cursor: pointer;
+}
+.btn_corusel:active, .btn_corusel:focus{
+    border: none;
+    outline:none;
+    resize:none;
+}
+
+.privilegia_about{
+    margin-top: 5em;
+
+}
+.privilegia_about p {
+    margin-top: 10em
+}
+
+
+/* О нас */
+.features{
+    grid-column: 2/ 3;
+    grid-row: 4;
+    margin-top: 3%;
+}
+
+.features__pluses{
+    display: flex;
+    justify-content: space-between;
+}
+
+.features_plus_one p, .features__plus_two p, .features__plus_three p{
+    margin-top: 2em;
+}
+.features_info{
+    margin-top: 2em;
+}
+
+/* Каталог */
+.cat{
+    grid-column: 2/ 4;
+    grid-row: 5;
+}
+section#catalog h3{
+    font-size: 32px;
+    margin-bottom: 20px;
+
+}
+section#catalog .categories{
+    width: 100%;
+    margin-top: 35px;
+    font-size: 20px;
+
+}
+section#catalog  .categories ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    grid-column: 2/ 4;
+    
+}
+section#catalog input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+}
+section#catalog #all:checked ~ .categories #all-tab,
+section#catalog #giroscooters:checked ~ .categories #giroscooters-tab,
+section#catalog #electric_scooters:checked ~ .categories #electric_scooters-tab,
+section#catalog #segways:checked ~ .categories #segways-tab
+{
+    color: #fff;
+    background: #1e4da2;
+}
+section#catalog #all:checked ~ .panels #giroscooters-container,
+section#catalog #all:checked ~ .panels #electric_scooters-container,
+section#catalog #all:checked ~ .panels #segways-container,
+section#catalog #giroscooters:checked ~ .panels #giroscooters-container,
+section#catalog #electric_scooters:checked ~ .panels #electric_scooters-container,
+section#catalog #segways:checked ~ .panels #segways-container
+{
+    display: flex;
+}
+section#catalog .categories li label{
+    user-select: none;
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #000000;
+    transition: .5s ease-in-out;
+}
+section#catalog .categories li{
+    margin-left: 20px;
+
+}
+section#catalog .catalog-container .c-card:hover{
+    transform: scale(1.05);
+}
+section#catalog .categories li:first-of-type {
+    margin: 0;
+}
+section#catalog .catalog-container{
+    display: none;
+}
+section#catalog .catalog-container .c-card{
+    width: 320px;
+    border: solid 1px #e1e1e1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-top: 3em;
+    margin: 20px;
+}
+section#catalog .catalog-container .c-card img{
+    width: 80%;
+    margin-top: 10px;
+}
+section#catalog .catalog-container .c-card .type{
+    padding: 8px 5px;
+    color: #fff;
+    background: #1e4da2;
+    margin-top: 10px;
+    border-radius: 0px 15px 15px 0px;
+    width: 40%;
+}
+section#catalog .catalog-container .c-card .price-container{
+    padding: 0 15px;
+    margin-top: 15px;
+}
+section#catalog .catalog-container .c-card .price-container .price{
+    color: #000000;
+    font-size: 25px;
+}
+
+/* Консультанты */
+.consultants{
+    margin-top: 4em;
+    grid-column: 2/2;
+    grid-row: 6;
+}
+.consultant_block{
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.consultant_name{
+    display: flex;
+    align-items: center;
+    background-color: #efefef;
+    margin-right: 1em;
+}
+.consultant_info{
+    margin-left: 1em;
+    padding: 15px;
+}
+.consultant_info button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    border: unset;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background: #1e4da2;
+    color: #ffffff;
+}
+
+.consultant_info button:hover{
+    background: #23a6d5;
+}
+
+.consultant_foto img{ 
+    width: 185px;
+    height: 200px;
+}
+
+/* Компании */
+.brands{
+    margin-top: 4em;
+    grid-column: 1/3;
+    grid-row: 7;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.brands li{
+    list-style: none;
+    font-size: 3em;
+    color: #1e4da2;
+    cursor: pointer;
+}
+.brands li:hover{
+    color: #23a6d5;
+}
+
+/* Отзывы */
+.feedback{
+    margin-top: 4em;
+    grid-column: 2/2;
+    grid-row: 8;
+}
+
+.feedback h4{
+    border: #000;
+    margin-left: 5px;
+}
+.client_block{
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.client_name{
+    background-color: #efefef;
+    margin-right: 1em;
+}
+.client_info{
+    margin-left: 1em;
+    padding: 15px;
+}
+.user{
+    display: flex;
+    align-items: center; 
+}
+.client_info p{
+    margin-top: 5px;
+    border: solid #a3a3a3;
+    background-color: #a3a3a35d;
+}
+.client_info img{
+    height: 30px;
+}
+/* Полезная информация */
+.content{
+    margin-top: 4em;
+    grid-column: 2 / 3;
+    grid-row: 9;
+    transition: 1s;
+}
+.cont{
+    position: relative;
+    padding: 15px;
+    float:left;
+    cursor: pointer;    
+}
+.cont:hover {
+    transform: scale(1.2);
+}
+.cont img{
+    width: 250px;
+    height: 250px;
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    filter: brightness(50%);
+}
+.cont p{
+    color: #ffffff;
+    font-size: 15px;
+    top: 50%;
+    left: 30px;
+    position: absolute;
+    font-weight: 600;
+}
+
+
+/* Подписка на новости */
+.subscribe{
+    grid-column: 1 / 4;
+    grid-row: 10;
+    margin-top: 5em;
+    background: linear-gradient(-40deg,#6460d4, #23a6d5, #23d5ab );
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60px;
+    margin-bottom: 2%;
+}
+.subscribe h5{
+    color: #ffffff;
+}
+
+.subscribe input{
+    width: 150px;
+    height: 1px;
+    border: 1px solid #ffffff;
+    background-color: #2a8ed172;
+    padding: 15px;
+    margin-left: -5rem;
+}
+.subscribe input::placeholder{
+    color: #ffffff;
+}
+.subscribe input:focus{
+    background-color: #ffffff;
+    color: #000000;
+}
+.subscribe button{
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    border: unset;
+    margin-left: 3%;
+    background-color: #1e4da2;
+    color: #ffffff;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.subscribe button:hover{
+    background: #23a6d5;
+}
+
+/* Подвал */
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    grid-column: 1 / 4;
+    grid-row: 11;
+}
+.footer_info{
+    width: 400px;
+    margin-bottom: 2em;
+}
+.footer_info p{
+    margin-top: 1em;
+    color: grey;
+}
+
+.footer_nav li {
+    list-style: none;
+    margin-top: 0.5em;
+}
+.footer_nav a{
+    color: gray;
+    text-decoration: none;
+}
+.footer_nav a:hover{
+    color: #23a6d5;
+}
+.toUp {
+    width: 40px;
+    height: 40px;
+    background: url(../img/slider/up.png);
+    opacity: 0.7;
+    position: fixed;
+    z-index: 3;
+    bottom: 100px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.toUp:hover{
+    opacity: 1;
+}
+
+@media (max-width: 1024px) { 
+    .logo{
+        width: 96.4px;
+        height: 95.8px;
+    }
+    .btn__call{
+        left: 45px;
+    }
+    .brands h3{
+        margin-left: 3.85em;
+    }
+    .subscrib input{
+        margin-left: 2em;
+    }
+    .personal_info{
+        margin-left: 0px;
+    }
+    .brands li{
+        margin-left: 1em;
+    }
+}
